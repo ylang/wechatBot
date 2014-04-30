@@ -34,7 +34,7 @@ if ('development' == app.get('env')) {
 
 //app.get('/', routes.index);
 //app.get('/users', user.list);
-app.use('/wechat', wechat('some token', function (req, res, next) {
+app.use('/wechat', wechat('ylang', function (req, res, next) {
   // 微信输入信息都在req.weixin上
   var message = req.weixin;
   res.reply(message);
