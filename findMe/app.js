@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
 app.use('/wechat', wechat('ylang', function (req, res, next) {
   console.log("[WECHAT] get request " + req.weixin);
   // 微信输入信息都在req.weixin上
-  var message = req.weixin;
+  var message = req.weixin.Content;
   res.reply(message);
   if (message.FromUserName === 'diaosi') {
     // 回复屌丝(普通回复)
